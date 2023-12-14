@@ -173,6 +173,12 @@
 								<span>Download</span>
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="{{route('admin.query.index')}}" class="nav-link {{Request::is('admin/query')?'active':''}}">
+								<i class="icon-home4"></i>
+								<span>Queries</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 				<!-- /main navigation -->

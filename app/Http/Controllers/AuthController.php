@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Download;
+use App\Models\Query;
 use App\Models\Student;
 use App\Models\User;
 use Carbon\Carbon;
@@ -52,6 +53,18 @@ class AuthController extends Controller
         Auth::logout();
         toastr()->success('You Logout Successfully');
         return redirect('/');
+    }
+    public function queryStore(Request $request)
+    {        
+        try{
+            Query::create($request->all());
+            toastr()->success('Query Send Successfully!');
+            return redirect()->to(route('home'));
+        }catch(Exception $e)
+        {
+            toastr()->error($e->getMessage());
+            return redirect()->back();
+        }
     }
     public function home(Request $request)
     {        

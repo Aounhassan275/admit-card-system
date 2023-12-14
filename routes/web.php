@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 // Route::view('/home','auth.login');
 Route::get('/',[AuthController::class,'home'])->name('home');
 Route::view('login','auth.login');
+Route::view('query','front.query.index');
+Route::post('query/store',[AuthController::class,'queryStore'])->name('query.store');
 Route::post('login',[AuthController::class,'login'])->name('login');
 /******************LOGIN PAGE ROUTES END****************/
 /*******************LOGOUT ROUTE START*************/       

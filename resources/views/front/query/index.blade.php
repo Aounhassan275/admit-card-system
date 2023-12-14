@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Search Admin Card | ADMIT CARD SYSTEM </title>
+    <title>QUERY | ADMIT CARD SYSTEM </title>
 
 	<!-- Global stylesheets -->
     <link rel="shortcut icon" type="image/png" href="{{asset('front/image/favicon.png')}}">
@@ -45,32 +45,50 @@
 			<div class="content d-flex justify-content-center align-items-center">
 
 				<!-- Login card -->
-				<form class="login-form" method="GET" >
+				<form class="login-form" method="POST" action="{{route('query.store')}}">
+                    @csrf
 					<div class="card mb-0">
 						<div class="card-body">
 							<div class="text-center mb-3">
 								<i class="icon-people icon-2x text-warning-400 border-warning-400 border-3 rounded-round p-3 mb-3 mt-1"></i>
 								<h5 class="mb-0">Admit Card System</h5>
-								<span class="d-block text-muted">Search Admit Card</span>
+								<span class="d-block text-muted">Send your query to us</span>
 							</div>
-
+                            <label><strong>Name</strong></label>
 							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="text" name="roll_number" class="form-control" placeholder="Enter Roll Number" required>
+								<input type="text" name="name" class="form-control" placeholder="Enter Name" required>
 								<div class="form-control-feedback">
 									<i class="icon-user text-muted"></i>
 								</div>
 							</div>
-
+                            <label><strong>Email Address</strong></label>
 							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="date" name="dob" class="form-control" placeholder="Password" required>
+								<input type="email" name="email" class="form-control" placeholder="Enter Email Address" required>
 								<div class="form-control-feedback">
-									<i class="icon-lock2 text-muted"></i>
+									<i class="icon-mail5 text-muted"></i>
 								</div>
 							</div>
+                            <label><strong>Phone Number</strong></label>
+							<div class="form-group form-group-feedback form-group-feedback-left">
+								<input type="text" name="phone" class="form-control" placeholder="Enter Phone Number" required>
+								<div class="form-control-feedback">
+									<i class="icon-phone text-muted"></i>
+								</div>
+							</div>
+                            <label><strong>Subject</strong></label>
+							<div class="form-group form-group-feedback form-group-feedback-left">
+								<input type="text" name="subject" class="form-control" placeholder="Enter Query Subject" required>
+								<div class="form-control-feedback">
+									<i class="icon-diff-ignored text-muted"></i>
+								</div>
+							</div>
+							<div class="form-group form-group-feedback form-group-feedback-left">
+                                <label><strong>Message</strong></label>
+                                <textarea name="message" class="form-control"></textarea>
+							</div>
+
 							<div class="form-group">
-								<button type="submit" class="btn btn-primary btn-block">Search <i class="icon-circle-right2 ml-2"></i></button>
-								<br>
-								<a href="{{url('query')}}" class="btn btn-success btn-block">Send Query to Us! <i class="icon-mail5 ml-2"></i></a>
+								<button type="submit" class="btn btn-primary btn-block">Send <i class="icon-circle-right2 ml-2"></i></button>
 							</div>
 						</div>
 					</div>

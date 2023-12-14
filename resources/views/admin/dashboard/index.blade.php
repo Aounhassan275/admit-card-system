@@ -23,7 +23,7 @@
 </div>
 <div class="row">
     
-    <div class="col-sm-6 col-xl-6">
+    <div class="col-sm-4 col-xl-4">
         <a href="{{route('admin.student.index')}}">
             <div class="card card-body bg-blue-400 has-bg-image">
                 <div class="media">
@@ -39,7 +39,7 @@
             </div>
         </a>
     </div>
-    <div class="col-sm-6 col-xl-6">
+    <div class="col-sm-4 col-xl-4">
         <a href="{{route('admin.download.index')}}">
             <div class="card card-body bg-danger-400 has-bg-image">
                 <div class="media">
@@ -49,6 +49,21 @@
                     <div class="media-body text-right">
                     <h3 class="mb-0">{{App\Models\Download::count()}}</h3>
                         <span class="text-uppercase font-size-xs">Total Downloads</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-sm-4 col-xl-4">
+        <a href="{{route('admin.query.index')}}">
+            <div class="card card-body bg-teal-400 has-bg-image">
+                <div class="media">
+                    <div class="mr-3 align-self-center">
+                        <i class="icon-mail5 icon-3x opacity-75"></i>
+                    </div>
+                    <div class="media-body text-right">
+                    <h3 class="mb-0">{{App\Models\Query::count()}}</h3>
+                        <span class="text-uppercase font-size-xs">Total Queries</span>
                     </div>
                 </div>
             </div>

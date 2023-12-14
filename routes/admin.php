@@ -2,6 +2,7 @@
 /****************** ADMIN MIDDLEWARE PAGES ROUTES START****************/
 
 use App\Http\Controllers\Admin\DownloadController;
+use App\Http\Controllers\Admin\QueryController;
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -17,9 +18,12 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','middleware' => 'auth:user'], 
         /*******************STUDENT ROUTE START*************/       
         Route::resource('student',StudentController::class);
         /*******************STUDENT ROUTE END*************/   
-        /*******************STUDENT ROUTE START*************/       
+        /*******************DOWNLOAD ROUTE START*************/       
         Route::resource('download',DownloadController::class);
-        /*******************STUDENT ROUTE END*************/          
+        /*******************DOWNLOAD ROUTE END*************/   
+        /*******************QUERY ROUTE START*************/       
+        Route::resource('query',QueryController::class);
+        /*******************QUERY ROUTE END*************/          
     });
 });
 /****************** ADMIN MIDDLEWARE PAGES ROUTES END****************/
