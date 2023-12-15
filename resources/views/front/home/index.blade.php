@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Search Admin Card | ADMIT CARD SYSTEM </title>
+    <title>Search Admin Card | ADMIT CARD Management System </title>
 
 	<!-- Global stylesheets -->
     <link rel="shortcut icon" type="image/png" href="{{asset('front/image/favicon.png')}}">
@@ -49,13 +49,13 @@
 					<div class="card mb-0">
 						<div class="card-body">
 							<div class="text-center mb-3">
-								<i class="icon-people icon-2x text-warning-400 border-warning-400 border-3 rounded-round p-3 mb-3 mt-1"></i>
-								<h5 class="mb-0">Admit Card System</h5>
-								<span class="d-block text-muted">Search Admit Card</span>
+								<img src="{{asset("card-logo.png")}}" alt="">
+								<h5 class="mb-0">Assistant Section Officer <br>Special Recruitment Drive-2023</h5>
+								<span class="d-block text-muted">Download Admit Card <br> Use Acknowledgement Number & Date of Birth</span>
 							</div>
 
 							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="text" name="roll_number" class="form-control" placeholder="Enter Roll Number" required>
+								<input type="text" name="roll_number" class="form-control" placeholder="Acknowledgement Number (ASO***)" required>
 								<div class="form-control-feedback">
 									<i class="icon-user text-muted"></i>
 								</div>
@@ -68,7 +68,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<button type="submit" class="btn btn-primary btn-block">Search <i class="icon-circle-right2 ml-2"></i></button>
+								<button type="submit" class="btn btn-primary btn-block">Download <i class="icon-circle-right2 ml-2"></i></button>
 								<br>
 								<a href="{{url('query')}}" class="btn btn-success btn-block">Send Query to Us! <i class="icon-mail5 ml-2"></i></a>
 							</div>

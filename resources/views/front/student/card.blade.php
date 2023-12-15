@@ -81,39 +81,41 @@
                         <div class="card">
                             <div class="card-body bordered-card">
                                 <div class="row">
-                                    <div class="col-5">
+                                    <div class="col-4">
                                         <img src="{{asset("card-logo.png")}}" alt="">
                                     </div>
-                                    <div class="col-3">
-                                        <h2 class="border-single text-center">ADMIT CARD</h2> 
+                                    <div class="col-5">
+                                        <h1 class="text-center" style="font-size:20px"><strong>THE HIGH COURT OF ORISSA: CUTTACK</strong></h1>
                                         <br>
-                                        <h1 class="text-center"><strong>The High Court of Orissa</strong></h1>
+                                        <h2 class="text-center" ><strong>ADMIT CARD</strong> </h2> 
                                     </div>
-                                    <div class="col-4"></div>
-
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h1 class="text-center">Admission to the Preliminary Examination for the Post of Assistant Section Officer
-                                            (Special Drive), 2023</h1>
-                                        <h2 class="text-center">Date of Examination : </h2>
-                                        <h2 class="text-center">Time of Examination : <strong>10.00 A.M. to 12.00 NOON</strong></h2>
-                                        <h2 class="text-center">Reporting Time      : <strong> 09.00 A.M.</strong></h2>
+                                            (Special Recruitment Drive), 2023</h1>
+                                    </div>
+                                     <div class="col-md-7" style="margin:auto">
+                                        <h2>Date of Examination :<strong>24th December 2023</strong> </h2>
+                                        <h2>Time of Examination : <strong>10.00 A.M. to 12.00 NOON</strong></h2>
+                                        <h2>Reporting Time      : <strong> 09.00 A.M.</strong></h2>
                                         
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="row">
-                                            <div class="col-7 ml-4">
-                                                <h2>Roll No.         : <strong>{{$student->roll_number}}</strong></h2>
-                                                <h2>Candidateâ€™s Name : <strong>{{$student->name}}</strong></h2>
+                                            <div class="col-7 ml-4" style="margin-top:30px">
+                                                <h2>Roll No.         : <strong>{{$student->application_id}}</strong></h2>
+                                                <h2>Candidate’s Name : <strong>{{$student->name}}</strong></h2>
                                                 <h2>Date of Birth    : <strong>{{Carbon\Carbon::parse($student->dob)->format('M d , Y')}}</strong></h2>
+                                                <h2>Parent/Guardian Name    : <strong>{{$student->father_name}}</strong></h2>
                                             </div>
                                             <div class="col-4 text-right">
                                                 <img src="{{asset('uploaded_files/'.$student->folder_number.'/passportphoto.jpg')}}" height="150" width="150" alt="">
                                                 <br>
-                                                <img src="{{asset('uploaded_files/'.$student->folder_number.'/signature.jpg')}}" height="100" width="150" alt="">
+                                                <br>
+                                                <img src="{{asset('uploaded_files/'.$student->folder_number.'/signature.jpg')}}" height="80" width="200" alt="">
                                             </div>
 
                                         </div>
@@ -126,12 +128,12 @@
                                         <h2 class="text-center"><strong>{{$student->center_detail}}</strong></h2>
                                     </div>
                                 </div>
-                                <div class="row" style="margin-top:121px;">
-                                    <div class="col-md-6 ">
+                                <div class="row" style="margin-top:30px;">
+                                    <div class="col-md-6 " style="margin-top:90px;">
                                         <h2><strong>Signature of the Candidate </strong></h2>
                                     </div>
-                                    <div class="col-md-6 text-right">
-                                        <h2><strong>Registrar, Examination </strong></h2>
+                                    <div class="col-md-6 text-right"style="margin-top:30px;">
+                                        <img src="{{asset('sign.png')}}" height="80" width="230" alt="">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-top:10px;">
@@ -155,7 +157,7 @@
                                             5. Possession of Electronic device in any form is strictly prohibited in the Examination Hall.
                                         </h5>
                                         <h5>
-                                            6. The use of any unfair means by the candidate shall result in the cancellation of his/her candidature.
+                                            6. Use of any unfair means by the candidate shall result in the cancellation of his/her candidature.
                                         </h5>
                                         <h5>
                                             7. Impersonation is an offence. A Candidate found to be involved in impersonation, apart from disqualification, shall be
