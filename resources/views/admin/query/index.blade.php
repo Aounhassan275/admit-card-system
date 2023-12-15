@@ -55,7 +55,7 @@
                             @if($query->is_solve)
                             Already Solved
                             @else
-                            <a href="{{route('admin.query.solved',$solved->id)}}" class="btn btn-primary btn-sm">Mark Solved</a>
+                            <a href="{{route('admin.query.solved',$query->id)}}" class="btn btn-primary btn-sm">Mark Solved</a>
                             @endif
                         </td>
                     </tr>
