@@ -47,7 +47,7 @@
                         <i class="icon-stack-picture icon-3x opacity-75"></i>
                     </div>
                     <div class="media-body text-right">
-                    <h3 class="mb-0">{{App\Models\Download::count()}}</h3>
+                    <h3 class="mb-0">{{App\Models\Download::all()->unique('student_id')->count()}}</h3>
                         <span class="text-uppercase font-size-xs">Total Downloads</span>
                     </div>
                 </div>

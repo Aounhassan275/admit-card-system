@@ -22,6 +22,7 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','middleware' => 'auth:user'], 
         Route::resource('download',DownloadController::class);
         /*******************DOWNLOAD ROUTE END*************/   
         /*******************QUERY ROUTE START*************/       
+        Route::get('query/solved/{id}',[QueryController::class,'solved'])->name('query.solved');
         Route::resource('query',QueryController::class);
         /*******************QUERY ROUTE END*************/          
     });

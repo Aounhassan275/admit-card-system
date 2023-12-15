@@ -75,9 +75,13 @@ class AuthController extends Controller
                         ->first();
             if($student)
             {
-                Download::create([
-                    'student_id' => $student->id
-                ]);
+                $isAlreadyDownload = Download::where('student_id',$student->id)->count();
+                if($isAlreadyDownload == 0)
+                {
+                    Download::create([
+                        'student_id' => $student->id
+                    ]);
+                }
                 return view('front.student.card',compact('student'));
             }else{
                 toastr()->error('Not Found.');

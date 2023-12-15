@@ -14,6 +14,7 @@ class Query extends Model
         'email',
         'phone',
         'subject',
-        'message'
+        'message',
+        'is_solve'
     ];
 }
