@@ -15,7 +15,7 @@ class DownloadController extends Controller
      */
     public function index()
     {
-        $downloads = Download::all();
+        $downloads = Download::all()->unique('student_id');
         return view('admin.download.index',compact('downloads'));
     }
 

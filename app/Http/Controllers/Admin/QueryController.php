@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Query;
+use Exception;
 use Illuminate\Http\Request;
 
 class QueryController extends Controller
@@ -83,5 +84,22 @@ class QueryController extends Controller
     public function destroy(Query $query)
     {
         //
+    }
+    public function solved($id)
+    {
+        try{
+            $query = Query::find($id);
+            $query->update([
+                'is_solve' => true
+            ]);
+            toastr()->success('Query Status Updated Successfully');
+            return back();
+        }catch(Exception $e)
+        {
+            toastr()->error($e->getMessage());
+            return back();
+
+        }
+
     }
 }
