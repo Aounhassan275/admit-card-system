@@ -51,6 +51,7 @@
                             <span class="badge badge-danger">Pending</span>
                             @endif
                         </td>
+                        
                         <td>
                             @if($query->is_solve)
                             Already Solved
