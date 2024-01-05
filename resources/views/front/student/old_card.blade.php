@@ -63,11 +63,6 @@
             border: 3px;
             border-style: dotted;
         }
-        .font-sizes {
-            font-weight: bolder;
-            font-size: 20px;
-            width: 100%;
-        }
     </style>
 </head>
 
@@ -86,25 +81,25 @@
                         <div class="card">
                             <div class="card-body bordered-card">
                                 <div class="row">
-                                    <div class="col-3">
-                                        <img src="{{asset("card-logo.png")}}"  style="margin-left:100px;" alt="">
+                                    <div class="col-4">
+                                        <img src="{{asset("card-logo.png")}}" alt="">
                                     </div>
-                                    <div class="col-6">
-                                        <h1 class="text-center   mt-4" style=" font-size: 35px;
-                                        border: solid;
-                                        background-color: black;
-                                        color: white;"><strong>THE HIGH COURT OF ORISSA</strong></h1>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h1 class="text-center" style="font-size:35px;" ><strong><u>ADMIT CARD</u></strong> </h1>
+                                    <div class="col-5">
+                                        <h1 class="text-center" style="font-size:20px"><strong>THE HIGH COURT OF ORISSA: CUTTACK</strong></h1>
+                                        <br>
+                                        <h2 class="text-center" ><strong>ADMIT CARD</strong> </h2> 
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1 class="text-center">Admission to the Main Written Examination for the Posts of Assistant Section Officer 
+                                        <h1 class="text-center">Admission to the Preliminary Examination for the Post of Assistant Section Officer
                                             (Special Recruitment Drive), 2023</h1>
+                                    </div>
+                                     <div class="col-md-7" style="margin:auto">
+                                        <h2>Date of Examination :<strong>24th December 2023</strong> </h2>
+                                        <h2>Time of Examination : <strong>10.00 A.M. to 12.00 NOON</strong></h2>
+                                        <h2>Reporting Time      : <strong> 09.00 A.M.</strong></h2>
+                                        
                                     </div>
                                 </div>
                                 <div class="row">
@@ -112,7 +107,7 @@
                                         <div class="row">
                                             <div class="col-7 ml-4" style="margin-top:30px">
                                                 <h2>Roll No.         : <strong>{{$student->application_id}}</strong></h2>
-                                                <h2>Candidateï¿½s Name : <strong>{{$student->name}}</strong></h2>
+                                                <h2>Candidate’s Name : <strong>{{$student->name}}</strong></h2>
                                                 <h2>Date of Birth    : <strong>{{Carbon\Carbon::parse($student->dob)->format('M d , Y')}}</strong></h2>
                                                 <h2>Parent/Guardian Name    : <strong>{{$student->father_name}}</strong></h2>
                                             </div>
@@ -127,53 +122,18 @@
 
                                     </div>
                                 </div>
-                                <div class="row mt-4">
-                                    <div class="col-md-12 ml-4 mr-4 ">
-                                        <table class="border-single font-sizes">
-                                            <tbody>
-                                                <tr class="border-single">
-                                                    <td colspan="3" class="text-center">
-                                                        DATE OF EXAMINATION: :<strong>14.01.2024 (SUNDAY)</strong>
-                                                        <br>
-                                                        Reporting Time : 09.00 A.M.
-                                                    </td>
-                                                </tr>
-                                                <tr class="border-single">
-                                                    <td colspan="3" class="text-center">
-                                                        TIME SCHEDULE
-                                                    </td>
-                                                </tr>
-                                                <tr class="border-single">
-                                                    <td  class="border-single text-center">1st Sitting</td>
-                                                    <td  class="border-single text-center">1O.00 A.M. to 12.O0 Noon </td>
-                                                    <td  class="border-single text-center">ENGLISH</td>
-                                                </tr>
-                                                <tr class="border-single">
-                                                    <td  class="border-single text-center">2nd Sitting</td>
-                                                    <td  class="border-single text-center">12.30 P.M. to 1.3O P.M.</td>
-                                                    <td  class="border-single text-center">GENERAL AWARENESS AND TEST OF REASONING</td>
-                                                </tr>
-                                                <tr class="border-single">
-                                                    <td  class="border-single text-center">3rd Sitting</td>
-                                                    <td  class="border-single text-center">2.30 P.M. to 4.30 P.M 	</td>
-                                                    <td  class="border-single text-center">MATHEMATICS</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-md-12 border-single">
+                                <div class="row">
+                                    <div class="col-md-12 border-rounded">
                                         <h2 class="text-center"><strong><u>VENUE</u></strong></h2>
                                         <h2 class="text-center"><strong>{{$student->center_detail}}</strong></h2>
                                     </div>
                                 </div>
-                                <div class="row" style="margin-top:10px;">
-                                    <div class="col-md-6">
-                                        <h2 class="text-left"><strong>Signature of the Candidate </strong></h2>
+                                <div class="row" style="margin-top:30px;">
+                                    <div class="col-md-6 " style="margin-top:90px;">
+                                        <h2><strong>Signature of the Candidate </strong></h2>
                                     </div>
-                                    <div class="col-md-6">
-                                        <h2  class="text-right"><strong>Registrar, Examination.</strong></h2>
+                                    <div class="col-md-6 text-right"style="margin-top:30px;">
+                                        <img src="{{asset('sign.png')}}" height="80" width="230" alt="">
                                     </div>
                                 </div>
                                 <div class="row" style="margin-top:10px;">
